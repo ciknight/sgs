@@ -6,10 +6,26 @@ from card import Category, Package, Suit, Type
 
 
 class Card():
+    """ 卡牌
+
+    Args:
+        name: 卡牌名字
+        type: 卡牌类型
+        category: 卡牌种类
+        suit: 卡牌花色
+        number: 卡牌大小
+        package: 卡牌包名
+    """
 
     def __init__(
-        self, *, name: str, type: Type, category: Category, suit: Suit, number: int,
-        package: Package
+        self,
+        *,
+        name: str,
+        type: Type,
+        category: Category,
+        suit: Suit,
+        number: int,
+        package: Package,
     ) -> None:
         self._name = name
         self._type = type
@@ -34,6 +50,12 @@ class Card():
 
 
 class CardPile():
+    """ 牌堆
+
+    Args:
+        packages: 卡牌包
+        cards: 卡牌列表
+    """
 
     def __init__(self, packages: List[Package] = None, cards: List[Card] = None) -> None:
         self._packages = packages or []

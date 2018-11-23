@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 from enum import Enum, auto
 
 __all__ = ['Card', 'CardPile', 'Package', 'Suit', 'Category', 'Type']
